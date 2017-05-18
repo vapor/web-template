@@ -1,0 +1,10 @@
+#extend("base")
+
+#export("title") { It works }
+
+#export("content") {
+	<div class="welcome">
+		<img src="/images/it-works.png">
+	</div>
+}
+
