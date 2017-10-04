@@ -8,7 +8,7 @@ extension Config {
 
         try setupProviders()
     }
-    
+
     /// Configure providers
     private func setupProviders() throws {
         try addProvider(LeafProvider.Provider.self)
