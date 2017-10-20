@@ -41,5 +41,12 @@
     ],
 
     "//": "Choose which commands this application can run",
-    "commands": []
+    "commands": [],
+    
+    "//": "When decoding application/x-www-form-urlencoded data from a request, choose",
+    "//": "how empty fields such as 'foo=' and 'bar' should be returned.",
+    "//": "true: For 'foo=', return an empty string. For 'bar', return boolean true.",
+    "//": "false: Empty fields are not returned at all (effectively returning nil).",
+    "//": "WARNING: Affects only formurlencoded request data, not query strings in URLs.",
+    "wwwFormsMaterializeEmptyValues": false
 }
