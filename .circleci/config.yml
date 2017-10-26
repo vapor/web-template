@@ -1,0 +1,11 @@
+version: 2
+
+jobs:
+    build:
+        working_directory: ~/app
+        docker:
+            - image: swift:4.0
+        steps:
+            - checkout
+            - run: swift build -c release
+            - run: swift test
