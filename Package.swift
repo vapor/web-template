@@ -14,12 +14,12 @@ let package = Package(
     ],
     targets: [
         .target(name: "App", dependencies: ["Vapor", "LeafProvider"],
-               exclude: [
-                   "Config",
-                   "Database",
-                   "Public",
-                   "Resources"
-               ]),
+                exclude: [
+                    "Config",
+                    "Database",
+                    "Public",
+                    "Resources"
+                ]),
         .target(name: "Run", dependencies: ["App"]),
         .testTarget(name: "AppTests", dependencies: ["App", "Testing"])
     ]
