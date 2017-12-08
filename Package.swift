@@ -13,13 +13,11 @@ let package = Package(
         .package(url: "https://github.com/vapor/leaf-provider.git", .upToNextMajor(from: "1.1.0")),
     ],
     targets: [
-        .target(name: "App", dependencies: ["Vapor", "LeafProvider"],
-                exclude: [
-                    "Config",
-                    "Database",
-                    "Public",
-                    "Resources"
-                ]),
+        .target(
+            name: "App",
+            dependencies: ["Vapor", "LeafProvider"],
+            exclude: ["Config", "Database", "Public", "Resources"]
+        ),
         .target(name: "Run", dependencies: ["App"]),
         .testTarget(name: "AppTests", dependencies: ["App", "Testing"])
     ]
