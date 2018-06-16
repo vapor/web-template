@@ -1,0 +1,19 @@
+#set("body") {
+    <h1>Tips <small class="text-muted lead">for working with the Vapor Web Template</small></h1>
+    
+    <div class="card-columns mt-5">
+
+    #for(tip in tips) {
+
+        <div class="card">
+            <div class="card-body">
+            <h5 class="card-title"><a href="/tips/#(tip.id)">#(tip.title)</a></h5>
+            <p class="card-text">#get(tip.text)</p>
+            </div>
+        </div>
+    }
+
+    </div>  
+}
+
+#embed("base")
