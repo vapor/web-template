@@ -1,25 +1,17 @@
 import Vapor
+import Leaf
 
-final class Routes: RouteCollection {
-    let view: ViewRenderer
-    init(_ view: ViewRenderer) {
-        self.view = view
+/// Register your application's routes here.
+public func routes(_ router: Router) throws {
+    
+    // Simple example of a route that renders a leaf page
+    router.get("/") { req -> Future<View> in
+        let leaf = try req.make(LeafRenderer.self)
+        return leaf.render("index", [String: String]())
     }
 
-    func build(_ builder: RouteBuilder) throws {
-        /// GET /
-        builder.get { req in
-            return try self.view.make("welcome")
-        }
-
-        /// GET /hello/...
-        builder.resource("hello", HelloController(view))
-
-        // response to requests to /info domain
-        // with a description of the request
-        builder.get("info") { req in
-            return req.description
-        }
-
-    }
+    // Typically routes reference a controller method
+    let tipController = TipController()
+    router.get("tips", use: tipController.index)
+    router.get("tips", Tip.parameter, use: tipController.detail)
 }

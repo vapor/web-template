@@ -1,0 +1,9 @@
+#set("body") {
+    <section class=" text-center">
+        <h1 class="jumbotron-heading">#(tip.title)</h1>
+        <p class="lead p-4">#get(tip.text)</p>
+        <p><a href="/tips" class="btn btn-light my-2">Back for more</a></p>
+    </section>
+}
+
+#embed("base")
