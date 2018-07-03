@@ -10,7 +10,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/vapor/vapor.git", .upToNextMajor(from: "3.0.5")),
-        .package(url: "https://github.com/vapor/leaf-provider.git", .upToNextMajor(from: "3.0.0-rc.2.2")),
+        .package(url: "https://github.com/vapor/leaf-provider.git", .upToNextMajor(from: "1.1.0")),
     ],
     targets: [
         .target(
