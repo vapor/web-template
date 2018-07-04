@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>#import("title")</title>
+	<title>#get(title)</title>
 	<link rel="stylesheet" href="/styles/app.css">
 </head>
 <body>
-
-#import("content")
-
+	#get(body)
 </body>
 </html>
