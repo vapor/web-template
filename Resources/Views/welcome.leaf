@@ -1,10 +1,9 @@
-#extend("base")
+#set("title") {It works}
 
-#export("title") { It works }
-
-#export("content") {
+#set("body") {
 	<div class="welcome">
 		<img src="/images/it-works.png">
 	</div>
 }
 
+#embed("base")
