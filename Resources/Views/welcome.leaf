@@ -1,4 +1,4 @@
-#set("title") {It works}
+#set("title") { It works }
 
 #set("body") {
 	<div class="welcome">

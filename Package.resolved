@@ -51,8 +51,8 @@
         "repositoryURL": "https://github.com/vapor/leaf.git",
         "state": {
           "branch": null,
-          "revision": "a71cb0cd29ec88ee72baa00668c05e327114f27c",
-          "version": "3.0.0-rc.2.2"
+          "revision": "b90fa8e1345a132c712101e7523e8287b9611be2",
+          "version": "3.0.0"
         }
       },
       {
@@ -123,8 +123,8 @@
         "repositoryURL": "https://github.com/vapor/template-kit.git",
         "state": {
           "branch": null,
-          "revision": "43b57b5861d5181b906ac6411d28645e980bb638",
-          "version": "1.0.1"
+          "revision": "db35b1c35aabd0f5db3abca0cfda7becfe9c43e2",
+          "version": "1.1.0"
         }
       },
       {
