@@ -22,7 +22,9 @@ RUN apt-get -qq update && apt-get install -y \
 WORKDIR /app
 COPY --from=builder /build/bin/Run .
 COPY --from=builder /build/lib/* /usr/lib/
-COPY --from=builder /app/Public ./Public
-COPY --from=builder /app/Resources ./Resources
+# Uncomment the next line if you need to load resources from the `Public` directory
+#COPY --from=builder /app/Public ./Public
+# Uncommand the next line if you are using Leaf
+#COPY --from=builder /app/Resources ./Resources
 
 ENTRYPOINT ./Run serve --env $ENVIRONMENT --hostname 0.0.0.0 --port 80
