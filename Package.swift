@@ -3,6 +3,10 @@ import PackageDescription
 
 let package = Package(
     name: "app",
+    products: [
+        .executable(name: "Run", targets: ["Run"]),
+        .library(name: "App", targets: ["App"]),
+    ],
     dependencies: [
         // 💧 A server-side Swift web framework.
         .package(url: "https://github.com/vapor/vapor.git", from: "4.0.0-alpha.2"),
