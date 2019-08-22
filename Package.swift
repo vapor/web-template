@@ -12,7 +12,7 @@ let package = Package(
         .package(url: "https://github.com/vapor/vapor.git", from: "4.0.0-alpha.2"),
 
         // 🍃 An expressive, performant, and extensible templating language built for Swift.
-        .package(url: "https://github.com/vapor/leaf.git", .branch("master")),
+        .package(url: "https://github.com/vapor/leaf.git", from: "4.0.0-alpha.1"),
     ],
     targets: [
         .target(name: "App", dependencies: ["Leaf", "Vapor"]),
