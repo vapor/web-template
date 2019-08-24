@@ -1,16 +1,15 @@
 import Vapor
 
-/// Register your application's routes here.
-public func routes(_ router: Router) throws {
-    // "It works" page
-    router.get { req in
-        return try req.view().render("welcome")
+func routes(_ r: Routes, _ c: Container) throws {
+    let view = try c.make(ViewRenderer.self)
+
+    r.get { req -> EventLoopFuture<View> in
+        return view.render("welcome")
     }
-    
-    // Says hello
-    router.get("hello", String.parameter) { req -> Future<View> in
-        return try req.view().render("hello", [
-            "name": req.parameters.next(String.self)
+
+    r.get("hello", ":name") { req -> EventLoopFuture<View> in
+        return view.render("hello", [
+            "name": req.parameters.get("name") ?? "n/a"
         ])
     }
 }
